@@ -1,11 +1,11 @@
 package com.BridgeLabz;
 
 public class MaxValueGenerics {
-	public static void MaxValue(int a,int b,int c){
-		Integer n1=a;
-		Integer n2=b;
-		Integer n3=c;
-		Integer max=n1;
+	public static void MaxFloatValue(Float a,Float b,Float c){
+		Float n1=a;
+		Float n2=b;
+		Float n3=c;
+		Float max=n1;
 		if(n2.compareTo(max)>0) {
 
 			max=n2;
@@ -17,10 +17,10 @@ public class MaxValueGenerics {
 	}
 	public static void main(String[] args) {
 		System.out.println("TC 1.1 Keeping max value at 1");
-		MaxValue(3,2,1);
+		MaxFloatValue(3.10f,2.20f,1.10f);
 		System.out.println("TC 1.2 keeping max value at 2");
-		MaxValue(2,3,1);
+		MaxFloatValue(2.20f,3.10f,1.10f);
 		System.out.println("TC 1.3 keeping max value at 3");
-		MaxValue(1,2,3);
+		MaxFloatValue(1.10f,2.20f,3.10f);
 	}  
 }  
