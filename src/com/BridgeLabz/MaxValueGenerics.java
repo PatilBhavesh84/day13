@@ -1,25 +1,19 @@
 package com.BridgeLabz;
 
 public class MaxValueGenerics {
-	public static void MaxStringValue(String a,String b,String c){
-		String st1=a;
-		String st2=b;
-		String st3=c;
-		String max=st1;
-		if(st2.compareTo(max)>0) {
-			max=st2;
-		}
-		if(st3.compareTo(max)>0) {
-			max=st3;
-		}
-		System.out.println("Maximum number is "+max);
+	public static <T extends Comparable<T>>T  MaxValue(T a1,T a2,T a3){
+		T max=a1;
+		if(a2.compareTo(max)>0) 
+			max=a2;
+		if(a3.compareTo(max)>0) 
+			max=a3;
+		return max;
 	}
+
+
 	public static void main(String[] args) {
-		System.out.println("TC 1.1 Keeping max string at 1");
-		MaxStringValue("Apple","Peach","Banana");
-		System.out.println("TC 1.2 keeping max string at 2");
-		MaxStringValue("Peach","Apple","Banana");
-		System.out.println("TC 1.3 keeping max string at 3");
-		MaxStringValue("Banana","Peach","Apple");
+		System.out.println("Max value in 3 Integers is:"+MaxValue(3,2,1));
+		System.out.println("Max value is 3 Float is:"+MaxValue(3.10f,2.20f,1.10f));
+		System.out.println("Max value is 3 String is:"+MaxValue("Apple","Peach","Banana"));
 	}  
-}  
+}
